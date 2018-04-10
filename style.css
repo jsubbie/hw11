@@ -1,0 +1,62 @@
+
+/* body elements */
+
+html {
+    width:auto;
+    height:auto;
+}
+
+body {
+    height: auto; 
+    background-color: rgba(235, 186, 28, 0.836);
+}
+
+.jumbotron {
+    background-image: url("mars_landscape.jpg");    
+    background-color: white;
+    margin-bottom: 0;
+    min-height: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}   
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-style: italic; 
+    background-color: white;
+    color: rgb(36, 35, 35);
+}
+
+/* font formatting  */
+
+#jumbotron {
+    font-family: Arial, Helvetica, sans-serif; 
+    color: white; 
+}
+
+h2 { 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #333; 
+}
+
+h3 { 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #333; 
+}
+
+h4 { 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #333; 
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #333;
+}
+

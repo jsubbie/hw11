@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>30 Seconds to Mars</title>
+  <!--- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!---Custom stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 style="color: whitesmoke;">Mars News</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click to Get News</a></p>
+    </div>
+
+    <!-- Scrape Scrap-->
+
+    <!-- Latest News-->
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h3>{{ mars.news_title }}</h3>
+        <p>{{ mars.news_p }}</p>
+
+      </div>
+    </div>
+
+<!-- Featured Image, Weather, and Table -->
+
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Featured Mars Image</h3>
+        <img src= {{ mars.featured_image_url}} style="width: 100%"/>
+     
+
+      </div>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+              <div class="panel-body">
+                <h4>Current Mars Weather</h4>
+                {{ mars.mars_weather }}
+              </div>
+            </div>
+        <div class="row">
+          <h4>Mars Facts</h4>
+          <div>{{ mars.mars_facts|safe}}</div>
+        </div>
+    </div>
+
+    <!--hemisphere images -->
+    <div class="row">
+        <div class="col-md-12">
+          <h3 style="text-align:center">Mars Hemispheres </h3>
+    <div class="col-md-6">
+            <img src="{{mars['hemispheres'][0]['img_url']}}" alt="" class="img-thumbnail" style="width:100%">
+            <h4 style="text-align: center">{{mars.hemispheres[0].title}}</h4>
+        </a>
+    </div>
+ 
+
+    <div class="col-md-6">
+            <img src="{{mars['hemispheres'][2]['img_url']}}" alt="" class="img-thumbnail" style="width:100%">
+            <h4 style="text-align: center">{{mars.hemispheres[2].title}}</h4>
+        </a>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-md-6">
+              <img src="{{mars['hemispheres'][4]['img_url']}}" alt="" class="img-thumbnail" style="width:100%">
+              <h4 style="text-align: center">{{mars.hemispheres[4].title}}</h4>
+          </a>
+      </div>
+  
+      <div class="col-md-6">
+              <img src="{{mars['hemispheres'][6]['img_url']}}" alt="" class="img-thumbnail" style="width:100%">
+              <h4 style="text-align: center">{{mars.hemispheres[6].title}}</h4>
+          </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    2018 JMS Research Corp.
+  </div>
+
+</body>
+</html>
